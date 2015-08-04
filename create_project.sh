@@ -3,11 +3,11 @@
 create_project()
 {
     echo "Creating project $1"
-    mkdir $1/src
-    mkdir $1/include
-    mkdir $1/obj
-    mkdir $1/lib
-    mkdir $1/bin
+    mkdir -p $1/src
+    mkdir -p $1/include
+    mkdir -p $1/obj
+    mkdir -p $1/lib
+    mkdir -p $1/bin
 }
 
 create_project
