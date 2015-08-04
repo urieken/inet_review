@@ -26,13 +26,13 @@ class CConsole
         CConsole(const std::string&,
                  const std::string&,
                  const std::string&);
-        ~CConsole();
+        virtual ~CConsole();
 
         inline void setPrompt(const std::string& _prompt)
         {m_messages.prompt   = _prompt;};
         inline void setWelcomeMessage(const std::string& _message)
         {m_messages.welcome  = _message;};
-        inline void setExitMessage(const std::string& _messsage)
+        inline void setExitMessage(const std::string& _message)
         {m_messages.exit     = _message;};
 
         inline const std::string& getPrompt() const
