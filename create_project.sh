@@ -1,13 +1,14 @@
 #!/bin/sh
 
-create_project()
-{
-    echo "Creating project $1"
-    mkdir -p $1/src
-    mkdir -p $1/include
-    mkdir -p $1/obj
-    mkdir -p $1/lib
-    mkdir -p $1/bin
-}
+echo "Creating project: $1"
 
-create_project
+for i in include source obj lib bin
+do
+    echo "Creating $1/$i"
+    mkdir -p $1/$i
+done
+
+
+
+
+
