@@ -24,7 +24,14 @@ PROGRAM=$(BIN_DIR)/console_test
 TEST_SRC=$(SRC_DIR)/test.cpp
 TEST_PROGRAM=-o $(PROGRAM)
 
+all: test
+
+all_debug: test_debug
+
 test: $(CONSOLE_SRC) console_lib
+	$(CPP) $(CPP_OPTS) $(INCLUDE) $(TEST_SRC) -L$(LIB_DIR) $(CONSOLE_DEP) $(TEST_PROGRAM)
+
+test_debug: $(CONSOLE_SRC) console_lib_debug
 	$(CPP) $(CPP_OPTS) $(INCLUDE) $(TEST_SRC) -L$(LIB_DIR) $(CONSOLE_DEP) $(TEST_PROGRAM)
 
 console_obj: $(CONSOLE_SRC)
